@@ -1,0 +1,36 @@
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\bin\Debug\net6.0\Carvajal.Shared.deps.json
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\bin\Debug\net6.0\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\bin\Debug\net6.0\Carvajal.Shared.pdb
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.csproj.AssemblyReference.cache
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.AssemblyInfoInputs.cache
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.AssemblyInfo.cs
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.csproj.CoreCompileInputs.cache
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\obj\Debug\net6.0\refint\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.pdb
+C:\Users\57320\Desktop\Carvajal1.3\Carvajal\Shared\obj\Debug\net6.0\ref\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\bin\Debug\net6.0\Carvajal.Shared.deps.json
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\bin\Debug\net6.0\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\bin\Debug\net6.0\Carvajal.Shared.pdb
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.csproj.AssemblyReference.cache
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.AssemblyInfoInputs.cache
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.AssemblyInfo.cs
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.csproj.CoreCompileInputs.cache
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\obj\Debug\net6.0\refint\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.pdb
+C:\Users\57320\Desktop\Carvajal\Carvajal\Shared\obj\Debug\net6.0\ref\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\bin\Debug\net6.0\Carvajal.Shared.deps.json
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\bin\Debug\net6.0\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\bin\Debug\net6.0\Carvajal.Shared.pdb
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.csproj.AssemblyReference.cache
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.AssemblyInfoInputs.cache
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.AssemblyInfo.cs
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.csproj.CoreCompileInputs.cache
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\obj\Debug\net6.0\refint\Carvajal.Shared.dll
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\obj\Debug\net6.0\Carvajal.Shared.pdb
+C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Shared\obj\Debug\net6.0\ref\Carvajal.Shared.dll

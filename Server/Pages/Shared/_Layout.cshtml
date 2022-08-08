@@ -1,0 +1,27 @@
+﻿@using Microsoft.AspNetCore.Hosting
+@using Microsoft.AspNetCore.Mvc.ViewEngines
+@inject IWebHostEnvironment Environment
+@inject ICompositeViewEngine Engine
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CRMNet.Server</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../../Intranet/css/vendor.min.css" />
+    <link rel="stylesheet" href="../../Intranet/css/default/app.min.css" />
+
+</head>
+<body class="pace-top">
+
+    @RenderBody()
+
+    <script src="../../Intranet/js/app.min.js"></script>
+    <script src="../../Intranet/js/vendor.min.js"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

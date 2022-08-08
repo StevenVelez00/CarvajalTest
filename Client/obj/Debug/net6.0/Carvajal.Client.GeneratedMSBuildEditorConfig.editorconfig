@@ -1,0 +1,83 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = Carvajal.Client
+build_property.RootNamespace = Carvajal.Client
+build_property.ProjectDir = C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\57320\Desktop\Prueba Fabrica Steven Velez Ocampo\Carvajal\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Pages/Authentication.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aGVudGljYXRpb24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Pages/Intranet.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW50cmFuZXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Pages/Pedidos/Pedidos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVkaWRvc1xQZWRpZG9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Pages/Pedidos/PedidosCRUD.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUGVkaWRvc1xQZWRpZG9zQ1JVRC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Pages/Productos/Productos.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdG9zXFByb2R1Y3Rvcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Pages/Productos/ProductosCRUD.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHVjdG9zXFByb2R1Y3Rvc0NSVUQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Pages/Usuarios/Usuarios.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcVXN1YXJpb3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Pages/Usuarios/UsuariosCRUD.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVXN1YXJpb3NcVXN1YXJpb3NDUlVELnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Shared/IntranetLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXEludHJhbmV0TGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Shared/LoginDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Shared/MenuModulos.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1lbnVNb2R1bG9zLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Shared/NoAutorizado.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5vQXV0b3JpemFkby5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Shared/RedirectToLogin.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZGlyZWN0VG9Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/57320/Desktop/Prueba Fabrica Steven Velez Ocampo/Carvajal/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 

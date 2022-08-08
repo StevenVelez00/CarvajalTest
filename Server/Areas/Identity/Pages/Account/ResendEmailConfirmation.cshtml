@@ -1,0 +1,65 @@
+﻿@page
+@model ResendEmailConfirmationModel
+@{
+    ViewData["Title"] = "Resend email confirmation";
+}
+
+<!-- BEGIN #app -->
+<div id="app" class="app">
+    <!-- BEGIN login -->
+    <div class="login login-with-news-feed">
+        <!-- BEGIN news-feed -->
+        <div class="news-feed">
+            <div class="news-image" style="background-image: url(../../Intranet/img/carvajal/fondo2.png)"></div>
+            @*<div class="news-image" style="background-image: url(../../Intranet/img/login-bg/login-bg-11.jpg)"></div>*@
+        </div>
+        <!-- END news-feed -->
+        <!-- BEGIN login-container -->
+        <div class="login-container">
+            <!-- BEGIN login-header -->
+            <div class="login-header">
+                <div class="brand">
+                    <div class="d-flex align-items-center">
+                        <span class="logo"></span>
+                        <b>Carvajal</b> SA
+                    </div>
+                    <small>Impulsamos el desarrollo económico y social haciendo las cosas bien.</small>
+                </div>
+                <div class="icon">
+                    <i class="fa fa-sign-in-alt"></i>
+                </div>
+            </div>
+            <!-- END login-header -->
+            <!-- BEGIN login-content -->
+            <div class="login-content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <section>
+                            <form method="post">
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <div class="form-floating">
+                                    <input asp-for="Input.Email" class="form-control" aria-required="true" />
+                                    <label asp-for="Input.Email" class="form-label"></label>
+                                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                                </div>
+                                <br />
+                                <button type="submit" class="w-100 btn btn-lg btn-primary">Resend</button>
+                            </form>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- END login-content -->
+        </div>
+        <!-- END login-container -->
+    </div>
+    <!-- END login -->
+    <!-- BEGIN scroll-top-btn -->
+    <a href="javascript:;" class="btn btn-icon btn-circle btn-success btn-scroll-to-top" data-toggle="scroll-to-top"><i class="fa fa-angle-up"></i></a>
+    <!-- END scroll-top-btn -->
+</div>
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

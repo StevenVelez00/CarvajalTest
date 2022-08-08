@@ -1,0 +1,74 @@
+﻿@page "/usuCrud"
+@page "/usuCrud/{id:int}"
+
+@inject IUsuarioService usuarioService
+
+@if (Id == null)
+{
+    <PageTitle>Crear un Nuevo Usuario</PageTitle>
+    <h3>Formulario de Creacion de Usuarios</h3>
+}
+else
+{
+    <PageTitle>Modificar @usuario.UsuNombre</PageTitle>
+    <h3>Formulario de Moficiacion del Usuario @usuario.UsuNombre</h3>
+}
+
+<div class="row">
+    <div class="col-md-7">
+        <EditForm Model="usuario" OnSubmit="HandleSubmit" OnValidSubmit="@OnValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary Model="usuario" style="color:red" />
+            <div>
+                <label for="UsuNombre">Nombre</label>
+                <InputText id="UsuNombre" @bind-Value="usuario.UsuNombre" class="form-control"></InputText>
+            </div>
+            <div class="py-2">
+                <label for="UsuPass">Contraseña</label>
+                <InputText id="UsuPass" type="password" @bind-Value="usuario.UsuPass" class="form-control"></InputText>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">@btnText</button>
+            <button type="button" class="btn btn-danger" @onclick="DeleteUsuario">Eliminar Usuario</button>
+        </EditForm>
+
+    </div>
+</div>
+
+@code {
+    [Parameter] public int? Id { get; set; }
+
+    string btnText = string.Empty;
+
+    Usuario usuario = new Usuario();
+
+    protected override async Task OnInitializedAsync()
+    {
+        btnText = Id == null ? "Guardar Nuevo Usuario" : "Modificar Usuario";
+
+        await usuarioService.GetUsuarios();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id != null)
+        {
+            usuario = await usuarioService.GetUsuarioById((int)Id);
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        if (Id == null)
+            await usuarioService.CreateUsuario(usuario);
+        else
+            await usuarioService.UpdateUsuario(usuario);
+    }
+
+    async Task DeleteUsuario()
+    {
+        await usuarioService.DeleteUsuario(usuario.UsuID);
+    }
+
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+}

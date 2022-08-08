@@ -1,0 +1,29 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+@inject NavigationManager Navigation
+@inject SignOutSessionStateManager SignOutManager
+
+<AuthorizeView>
+    <Authorized>
+        <a href="authentication/profile"><h4 class="card-title text-dark">Hola, @context.User.Identity?.Name!</h4></a>
+        <hr />
+        <p class="card-text">En el momento que no desees estar en la aplicacion, te invitamos a cerrar sesion con el siguiente boton.</p>
+        <button class="btn btn-danger" @onclick="BeginSignOut">Cerrar Sesión</button>
+    </Authorized>
+    <NotAuthorized>
+        <h3 class="card-title">Hola, Usuario</h3>
+        <hr />
+        <p class="card-text">Te invitamos a registrarte en nuestra aplicación para poder tener acceso a toda nuestra plataforma, si ya cuentas con un usuario y contraseña. por favor ingresa.</p>
+        <a href="authentication/login" class="btn btn-success">Ingresar a la Plataforma</a>
+        <a href="authentication/register" class="btn btn-danger">Registrarse como Empleado</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    private async Task BeginSignOut(MouseEventArgs args)
+    {
+        await SignOutManager.SetSignOutState();
+        Navigation.NavigateTo("authentication/logout");
+    }
+}

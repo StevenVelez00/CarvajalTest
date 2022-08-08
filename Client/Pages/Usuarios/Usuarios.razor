@@ -1,0 +1,61 @@
+﻿@page "/usuarios"
+@inject NavigationManager NavigationManager
+
+@inject IUsuarioService usuarioService
+
+<PageTitle>Usuarios</PageTitle>
+
+<AuthorizeView>
+    <Authorized>
+        <div class="row">
+            <div class="col-md-7">
+                <h3>Administración de Usuarios</h3>
+                <hr />
+                <table id="data-table-select" class="table table-striped table-bordered align-middle">
+                    <thead>
+                        <tr>
+                            <th style="width:30%">Nombre</th>
+                            <th style="width:36%">Contraseña Encriptada</th>
+                            <th style="width:32%">Contraseña Desencriptada</th>
+                            <th style="width:2%"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var usu in usuarioService.Usuarios)
+                        {
+                            <tr>
+                                <td>@usu.UsuNombre</td>
+                                <td>@usu.UsuPass</td>
+                                <td>@usu.UsuPassDecrypt</td>
+                                <td>
+                                    <button value="Modificar" class="btn btn-sm btn-primary p-1" @onclick="(() => MostrarUsuario(usu.UsuID))"><i class="fa fa-pencil"></i></button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+                <button class="btn btn-success" @onclick="CrearNuevoUsuario">Crear Nuevo Usuario</button>
+            </div>
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <NoAutorizado></NoAutorizado>
+    </NotAuthorized>
+</AuthorizeView>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await usuarioService.GetUsuarios();
+    }
+
+    void MostrarUsuario(int id)
+    {
+        NavigationManager.NavigateTo($"usuCrud/{id}");
+    }
+
+    void CrearNuevoUsuario()
+    {
+        NavigationManager.NavigateTo("/usuCrud/");
+    }
+}

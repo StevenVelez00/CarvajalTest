@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.BlazorWebAssembly">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ServiceWorkerAssetsManifest>service-worker-assets.js</ServiceWorkerAssetsManifest>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.7" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.7" PrivateAssets="all" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Authentication" Version="6.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Carvajal.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ServiceWorker Include="wwwroot\service-worker.js" PublishedContent="wwwroot\service-worker.published.js" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\intranet\plugins\js-cookie\dist\" />
+    <Folder Include="wwwroot\intranet\plugins\swiper\angular\" />
+    <Folder Include="wwwroot\intranet\plugins\swiper\core\" />
+    <Folder Include="wwwroot\intranet\plugins\swiper\modules\" />
+    <Folder Include="wwwroot\intranet\plugins\swiper\react\" />
+    <Folder Include="wwwroot\intranet\plugins\swiper\shared\" />
+    <Folder Include="wwwroot\intranet\plugins\swiper\svelte\" />
+    <Folder Include="wwwroot\intranet\plugins\swiper\types\" />
+    <Folder Include="wwwroot\intranet\plugins\swiper\vue\" />
+  </ItemGroup>
+
+</Project>

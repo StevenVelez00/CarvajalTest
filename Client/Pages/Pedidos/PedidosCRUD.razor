@@ -1,0 +1,124 @@
+﻿@page "/pedCrud"
+@page "/pedCrud/{id:int}"
+
+@inject IPedidoService pedidoService
+@inject NavigationManager NavigationManager
+
+@if (Id == null)
+{
+    <PageTitle>Crear un Nuevo Pedido</PageTitle>
+    <h3>Formulario de Creacion de Pedidos</h3>
+}
+else
+{
+    <PageTitle>Modificar Pedido</PageTitle>
+    <h3>Formulario de Moficiacion de Pedido</h3>
+}
+
+<div class="row">
+    <div class="col-md-7">
+        <EditForm Model="pedido" OnSubmit="HandleSubmit" OnValidSubmit="@OnValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary style="color:red" />
+            <div>
+                <label>Usuario</label><br />
+                <InputSelect @bind-Value="pedido.UsuarioUsuID" class="form-select">
+                    <option value="">Seleccione un Usuario...</option>
+                    @foreach (var usu in pedidoService.listUsuarios)
+                    {
+                        <option value="@usu.UsuID">@usu.UsuNombre</option>
+                    }
+                </InputSelect>
+            </div>
+            <div>
+                <label>Producto</label><br />
+                <InputSelect @bind-Value="pedido.ProductoProID" class="form-select">
+                    <option value="">Seleccione un Producto...</option>
+                    @foreach (var pro in pedidoService.listProductos)
+                    {
+                        <option value="@pro.ProID">@pro.ProDesc</option>
+                    }
+                </InputSelect>
+            </div>
+            <div>
+                <label for="PedCant">Cantidad</label>
+                <InputNumber id="PedCant" type="Number" @bind-Value="pedido.PedCant" class="form-control"></InputNumber>
+            </div>
+            <div>
+                <label for="pedVrUnit">Valor Unitario</label>
+                <InputNumber id="pedVrUnit" type="number" @bind-Value="pedido.pedVrUnit" class="form-control"></InputNumber>
+            </div>
+            <div>
+                <label for="PedIVA">IVA</label>
+                <InputNumber id="PedIVA" type="Decimal" @bind-Value="pedido.PedIVA" class="form-control"></InputNumber>
+            </div>
+            <div class="d-grid gap-2 py-2">
+                <button type="submit" class="btn btn-success" @onclick="ActualizarTotales">Recalcular Totales</button>
+            </div>
+            <div>
+                <label for="PedSubtot">Subtotal</label>
+                <InputNumber id="PedSubtot" type="number" @bind-Value="pedido.PedSubtot" class="form-control" disabled></InputNumber>
+            </div>
+            <div>
+                <label for="PedTotal">Total</label>
+                <InputNumber id="PedTotal" type="number" @bind-Value="pedido.PedTotal" class="form-control" disabled></InputNumber>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">@btnText</button>
+            <button type="button" class="btn btn-danger" @onclick="EliminarPedido">Eliminar Pedido</button>
+        </EditForm>
+    </div>
+    <div class="col-md-5">
+        <img style="width:100%" src="intranet/img/carvajal/fondo3.png" alt="" />
+    </div>
+</div>
+
+@code {
+    [Parameter] public int? Id { get; set; }
+
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+
+    public int? valorUnitario { get; set; }
+
+    string btnText = string.Empty;
+
+    Pedido pedido = new Pedido();
+
+    protected override async Task OnInitializedAsync()
+    {
+        btnText = Id == null ? "Guardar Nuevo Pedido" : "Modificar Pedido";
+
+        await pedidoService.ObtenerUsuarios();
+        await pedidoService.ObtenerProductos();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id != null)
+        {
+            pedido = await pedidoService.ObtenerPedidoID((int)Id);
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        NavigationManager.NavigateTo("/pedidos");          
+    }
+
+    async Task EliminarPedido()
+    {
+        await pedidoService.EliminarPedido(pedido.PedId);
+    }
+
+    async Task ActualizarTotales()
+    {
+        if (Id == null)
+        {
+            await pedidoService.CrearPedido(pedido);
+        }
+        else
+        {
+            await pedidoService.ActualizarPedido(pedido);
+        }
+    }
+}

@@ -1,0 +1,66 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="register register-with-news-feed">
+    <!-- BEGIN news-feed -->
+    <div class="news-feed">
+        <div class="news-image" style="background-image: url(../../Intranet/img/carvajal/fondo2.png)"></div>
+    </div>
+    <!-- END news-feed -->
+    <!-- BEGIN register-container -->
+    <div class="register-container">
+        <!-- BEGIN register-header -->
+        <div class="register-header mb-25px h1">
+            <div class="mb-1">Registro de Usuarios</div>
+            <small class="d-block fs-15px lh-16">Formulario Registro de Usuarios</small>
+        </div>
+        <!-- END register-header -->
+        <!-- BEGIN register-content -->
+        <div class="register-content">
+            <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="mb-3">
+                    <label asp-for="Input.Email"></label>
+                    <input asp-for="Input.Email" class="form-control fs-13px" autocomplete="username" placeholder="Email address" aria-required="true" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="Input.Password"></label>
+                    <input asp-for="Input.Password" class="form-control fs-13px" autocomplete="new-password" placeholder="Password" aria-required="true" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div class="mb-4">
+                    <label asp-for="Input.ConfirmPassword"></label>
+                    <input asp-for="Input.ConfirmPassword" class="form-control fs-13px" autocomplete="new-password" placeholder="Confirm Password" aria-required="true" />
+                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                </div>
+                <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" value="" id="agreementCheckbox" />
+                    <label class="form-check-label" for="agreementCheckbox">
+                        Al hacer clic en Registrarse, acepta nuestros <a href="javascript:;">Términos</a> y que ha leído nuestra <a href="javascript:;">Política de datos</a>, incluido nuestro <a href="javascript:;">Uso de cookies.</a>.
+                    </label>
+                </div>
+                <div class="mb-4">
+                    <button id="registerSubmit" type="submit" class="btn btn-primary d-block w-100 btn-lg h-45px fs-13px">Registrar</button>
+                </div>
+                <div class="mb-4 pb-5">
+                    Ya eres un miembro ? Click <a href="login">aqui</a> para login.
+                </div>
+                <hr class="bg-gray-600 opacity-2" />
+                <p class="text-center text-gray-600">
+                    &copy; Global Power Line Colombia All Right Reserved 2022
+                </p>
+
+            </form>
+        </div>
+        <!-- END register-content -->
+    </div>
+    <!-- END register-container -->
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,75 @@
+﻿@page "/prodCrud"
+@page "/prodCrud/{id:int}"
+
+@inject IProductoService productoService
+
+@if (Id == null)
+{
+    <PageTitle>Crear un Nuevo Producto</PageTitle>
+    <h3>Formulario de Creacion de Productos</h3>
+}
+else
+{
+    <PageTitle>Modificar @producto.ProDesc</PageTitle>
+    <h3>Formulario de Moficiacion del Producto @producto.ProDesc</h3>
+}
+
+<div class="row">
+    <div class="col-md-7">
+        <EditForm Model="producto" OnSubmit="HandleSubmit" OnValidSubmit="@OnValidSubmit">
+            <DataAnnotationsValidator />
+            <ValidationSummary excludePropertyErrors="false" style="color:red" />
+
+            <div>
+                <label for="ProDesc">Descripción</label>
+                <InputText id="ProDesc" @bind-Value="producto.ProDesc" class="form-control"></InputText>
+            </div>
+            <div class="py-2">
+                <label for="ProValor">Valor</label>
+                <InputNumber id="ProValor" type="Money" @bind-Value="producto.ProValor" class="form-control"></InputNumber>
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary">@btnText</button>
+            <button type="button" class="btn btn-danger" @onclick="EliminarProducto">Eliminar Producto</button>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public int? Id { get; set; }
+
+    string btnText = string.Empty;
+
+    Producto producto = new Producto();
+
+    protected override async Task OnInitializedAsync()
+    {
+        btnText = Id == null ? "Guardar Nuevo Producto" : "Modificar Producto";
+
+        await productoService.ObtenerProductos();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        if (Id != null)
+        {
+            producto = await productoService.ObtenerProductoID((int)Id);
+        }
+    }
+
+    async Task HandleSubmit()
+    {
+        if (Id == null)
+            await productoService.CrearProducto(producto);
+        else
+            await productoService.ActualizarProducto(producto);
+    }
+
+    async Task EliminarProducto()
+    {
+        await productoService.EliminarProducto(producto.ProID);
+    }
+
+    [Parameter] public EventCallback OnValidSubmit { get; set; }
+}
